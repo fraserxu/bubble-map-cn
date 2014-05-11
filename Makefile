@@ -1,8 +1,8 @@
-build/gz_2010_us_050_00_20m.zip:
+build/CHN_adm.zip:
 	mkdir -p $(dir $@)
-	curl -o $@ http://www2.census.gov/geo/tiger/GENZ2010/$(notdir $@)
+	curl -o $@ http://data.biogeo.ucdavis.edu/data/gadm2/shp/CHN_adm.zip
 
-build/gz_2010_us_050_00_20m.shp: build/gz_2010_us_050_00_20m.zip
+build/CHN_adm1.shp: build/CHN_adm.zip
 	unzip -od $(dir $@) $<
 	touch $@
 
