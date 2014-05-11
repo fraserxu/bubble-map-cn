@@ -2,7 +2,7 @@ build/CHN_adm.zip:
 	mkdir -p $(dir $@)
 	curl -o $@ http://data.biogeo.ucdavis.edu/data/gadm2/shp/CHN_adm.zip
 
-build/CHN_adm1.shp: build/CHN_adm.zip
+build/CHN_adm.shp: build/CHN_adm.zip
 	unzip -od $(dir $@) $<
 	touch $@
 
